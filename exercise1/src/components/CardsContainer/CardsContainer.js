@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { getAllColumns } from '../../redux/store';
 
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
@@ -6,7 +7,8 @@ import ColumnForm from '../ColumnForm/ColumnForm';
 import styles from './CardsContainer.module.scss';
 
 const CardsContainer = () => {
-    const columns = useSelector(state => state.columns);
+
+    const columns = useSelector(state => getAllColumns(state)); 
 
     return (
         <div className={styles.list}>
