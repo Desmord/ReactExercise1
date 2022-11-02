@@ -1,0 +1,51 @@
+@import '../../styles/settings.scss';
+
+
+.container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 60px;
+    background-color: darken($color-dark, 5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        // color: $color-light;
+        // background-color: rgba(255, 255, 255, 0.1);
+
+        a {
+            padding: 20px;
+            font-size: calc($base-size * 2);
+            color: $color-light;
+        }
+
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            padding: 10px;
+
+            a {
+                font-weight: 700;
+                font-size: calc($base-size * 1.5);
+                color: $color-light;
+                text-decoration: none;
+            }
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+
+        li:last-of-type {
+            margin-right: 10px;
+        }
+    }
+
+}
