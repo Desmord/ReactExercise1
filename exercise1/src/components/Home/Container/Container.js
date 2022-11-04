@@ -1,5 +1,5 @@
-import Header from "../Header/Header";
-import CardsContainer from "../CardsContainer/CardsContainer";
+import Header from '../../Header/Header'
+import CardsContainer from "../../CardsContainer/CardsContainer";
 
 import styles from './Container.module.scss';
 

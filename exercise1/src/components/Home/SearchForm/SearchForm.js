@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { updateSearchString } from '../../redux/store.js';
+import { updateSearchString } from '../../../redux/store';
 
-import TextInput from '../TextInput/TextInput';
-import Button from '../Button/Button';
+import TextInput from '../../TextInput/TextInput';
+import Button from '../../Button/Button';
 
 import styles from './SearchForm.module.scss';
 

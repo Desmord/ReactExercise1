@@ -1,0 +1,14 @@
+@import '../../styles/settings.scss';
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        font-size: calc($base-size * 3);
+        font-weight: 700;
+        padding: 50px 20px;
+    }
+}

@@ -1,18 +1,30 @@
-import Hero from "./components/Hero/Hero";
-import SearchForm from "./components/SearchForm/SearchForm";
-import Container from "./components/Container/Container";
+import { Routes, Route } from 'react-router-dom';
+
+
 import MainContainer from "./components/MainContainer/MainContainer";
 import NavBar from "./components/NavBar/NavBar";
+import PageTitle from "./components/PageTitle/PageTitle";
+import Favorite from "./components/Favorite/Favorite";
+import About from "./components/About/About";
+import Home from "./components/Home/Home";
+import PageNotFound from './components/PageNotFound/PageNotFound';
+
+
 
 const App = () => {
   return (
     <div>
       <MainContainer>
         <NavBar />
-        {/* dodac kontener na Main site i inne podstrony - Zrobic jakis jeden komponent i przekazywac childern dla niego w przypadku pod stron*/}
-        <Hero />
-        <SearchForm />
-        <Container />
+        <PageTitle>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favorite" element={<Favorite />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </PageTitle>
+
       </MainContainer>
 
     </div>
