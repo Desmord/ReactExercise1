@@ -7,7 +7,7 @@ import TextInput from '../TextInput/TextInput.js';
 
 import styles from './ColumnForm.module.scss';
 
-const ColumnForm = () => {
+const ColumnForm = ({ listId }) => {
 
     const [title, setTitle] = useState('');
     const [icon, setIcon] = useState('');
@@ -16,7 +16,7 @@ const ColumnForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addColumn({ title, icon }));
+        dispatch(addColumn({ title, icon, listId }));
         setTitle('');
         setIcon('');
     };

@@ -1,5 +1,5 @@
-import Header from '../../Header/Header'
-import CardsContainer from "../../CardsContainer/CardsContainer";
+import Header from '../Header/Header'
+import List from "../../List/List";
 
 import styles from './Container.module.scss';
 
@@ -8,7 +8,7 @@ const Container = () => {
         <div>
             <Header />
             <p className={styles.description}>Intresting things I want to check out!</p>
-            <CardsContainer />
+            <List />
         </div>
     );
 };

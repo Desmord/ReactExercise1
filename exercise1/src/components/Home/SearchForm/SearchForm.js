@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { updateSearchString } from '../../../redux/store';
 
 import TextInput from '../../TextInput/TextInput';
@@ -15,8 +15,12 @@ const SearchForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(updateSearchString({ searchString: searchText }));
-        // dispatch({ type: 'UPDATE_SEARCHSTRING', payload: { searchString: searchText } });
     }
+
+    useEffect(() => {
+        dispatch(updateSearchString({ searchString: `` }));
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <form className={styles.searchForm} onSubmit={handleSubmit}>

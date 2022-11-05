@@ -46,6 +46,11 @@
         li:last-of-type {
             margin-right: 10px;
         }
+
+        .linkActive {
+            color: $color-warning;
+        }
     }
 
 }
+
