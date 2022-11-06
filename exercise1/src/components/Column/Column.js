@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getFilteredCards} from '../../redux/store.js';
+import { getFilteredCards } from '../../redux/store.js';
 
 import Card from '../Card/Card.js';
 import CardForm from '../CardForm/CardForm.js';
@@ -15,7 +15,13 @@ const Column = ({ id, title, icon, action }) => {
             <span className={`${styles.icon} fa fa-${icon}`}></span>
             <h3 className={styles.title}> {title}</h3>
             <ul className={styles.cards}>
-                {cards.map(card => <Card key={card.id} title={card.title}></Card>)}
+                {cards.map(card =>
+                    <Card
+                        key={card.id}
+                        cardId={card.id}
+                        isFavorite={card.isFavorite}
+                        title={card.title}>
+                    </Card>)}
             </ul>
             <CardForm columnId={id} />
         </article>

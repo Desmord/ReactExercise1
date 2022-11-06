@@ -10,4 +10,23 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+
+    span{
+        font-weight: 700;
+        font-size: calc($base-size * 1.2);
+    }
+
+    span:hover{
+        cursor: pointer;
+    }
+
+}
+
+.favorite {
+    color: rgb(236, 240, 14);
+}
+
+
+.notFavorite {
+    color: $color-dark;
 }
