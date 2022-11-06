@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addList } from '../../../../redux/store.js';
+import { addList } from '../../../../redux/listsRedux';
 
 import Button from '../../../Button/Button.js';
 import TextInput from '../../../TextInput/TextInput.js';
@@ -16,7 +16,7 @@ const ListForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addList({title,description}))
+        dispatch(addList({ title, description }))
         setTitle('');
         setDescription('');
     };

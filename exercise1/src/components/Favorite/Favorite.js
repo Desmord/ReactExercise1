@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getFavoriteCards } from '../../redux/store'
-import { useEffect } from 'react';
+import { getFavoriteCards } from '../../redux/cardsRedux'
 
 import Card from '../Card/Card';
 
@@ -9,10 +8,6 @@ import styles from './Favorite.module.scss';
 const Favorite = () => {
 
     const favoriteCards = useSelector(({ cards }) => getFavoriteCards(cards))
-
-    // useEffect(() => {
-    //     console.log(favoriteCards)
-    // }, [favoriteCards])
 
     return (
         <div className={styles.container}>

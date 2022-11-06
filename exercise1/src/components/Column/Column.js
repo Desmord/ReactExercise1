@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getFilteredCards } from '../../redux/store.js';
+import { getFilteredCards } from '../../redux/cardsRedux';
 
 import Card from '../Card/Card.js';
 import CardForm from '../CardForm/CardForm.js';
